@@ -26,11 +26,8 @@ body{
 
 }
 /* small */
-@media (max-width:768px){
-    .container{
-        width: 750px ;
-    }
-}
+
+
 /* medium */
 @media (min-width:992px){
     .container{
@@ -60,12 +57,15 @@ body{
     text-align: center;
     color: #797979;
 }
-@media (max-width:767px){
+@media (min-width:0)  and (max-width:767px){
     .special-heading{
         font-size: 60px;
     }
     .special-heading + p{
       margin-top: -20px;
+    }
+    .portfolio{
+        text-align: ;
     }
 }
 /* End components */
@@ -81,6 +81,18 @@ body{
 .header .links{
     position: relative;
 }
+@media (min-width:0) and (max-width:767px){
+    .header .container  .feat{
+        display: grid;
+    }
+    .header .feat{
+        text-align: center;
+        padding: 20px;
+        grid-template-rows: repeat(auto-fill , minmax(300px , 1fr))
+    }
+
+}
+
 .header .links:hover .icon span:nth-child(2){
     width: 100%;
 }
@@ -224,7 +236,7 @@ padding-left: 25px;
     display: flex;
     margin-bottom: 40px;
 }
-@media (max-width:767px){
+@media (min-width:0) and (max-width:767px){
     .services .services-content .srv{
         flex-direction: column;
         text-align: center;
@@ -365,7 +377,7 @@ padding-left: 25px;
   color: #777;
 }
 }
-@media  (max-width:1199px){
+@media (min-width:768px) and (max-width:1199px){
     .portfolio{
         margin-left: -470px;
     }
@@ -456,17 +468,20 @@ padding-left: 25px;
 /* End Footer */
 @media (max-width: 767px){
     .portfolio-content .card{
-        margin-left: 100px;
+        text-align: center;
     }
     .about-content .image{
         margin-left: 71px;
         margin-bottom: 47px;
     }
+    .about-content .image::before{
+        display: none;
+    }
     .contact .container .special-heading , .contact .container .special-heading + p {
         margin-left: -100px;
     }
 }
-@media (max-width: 1199px){
+@media (min-width:768px) and (max-width: 1199px){
     .about{
          margin-left: 132px;
     }
@@ -482,6 +497,29 @@ padding-left: 25px;
     }
  
 }
+@media (min-width:677px) and (max-width:767px){
+    .portfolio{
+        position: relative;
+        left: -70%;
+    }
+    .about{
+        position: relative;
+        left: 30%;
+    }
+    .about-content{
+        margin-top: 20px;
+        margin-left: -24px;
+    }
+    .about-content .text{
+        text-align: center;
+    }
+}
+
+
+
+
+
+
 
 
 
